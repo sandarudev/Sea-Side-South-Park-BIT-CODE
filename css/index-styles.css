@@ -14,10 +14,14 @@
     --purple-solid: #350a4f;
     --purple-transparent: rgba(53, 10, 79, .7);
     --purple-transparent-alt: rgba(53, 10, 79, .5);
-    --purple-light: #8f50fb;
-    --yellow-solid: #fa9e2c;
-    --gradient-color: linear-gradient(to right, var(--yellow-solid), var(--purple-light));
-    --gradient-color-alt: linear-gradient(to right, var(--purple-light), var(--yellow-solid));
+    --grey-light: #080808;
+    --black-solid: #635959;
+    --gradient-color: linear-gradient(to right, var(--black-solid), var(--grey-light));
+    --gradient-color-alt: linear-gradient(to right, var(--grey-light), var(--black-solid));
+
+    /* My Colors */
+
+    --gradient1: linear-gradient(to right, var(--yellow-solid), var(--purple-light));
 }
 
 /*Global styles*/
@@ -111,12 +115,12 @@ section{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--purple-transparent);
+    background-color: var(--dark-color);
     z-index: 999;
 }
 
 .header.active{
-    background-color: var(--purple-solid);
+    background-color: var(--dark-color);
 }
 /*Header Styles-Nav*/
 .nav{
@@ -140,7 +144,7 @@ section{
 
 }
 
-.hamgurger-menu .fa-times{
+.hamburger-menu .fa-times{
     display: none;
 }
 
@@ -160,7 +164,7 @@ section{
     left: 0;
     width: 100%;
     height: 100vh ;
-    background-color: var(--purple-solid);
+    background-color: var(--dark-color) ;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -211,7 +215,8 @@ section{
     left: 0;
     width: inherit;
     height: inherit;
-    background-color: var(--purple-transparent-alt) ;
+    background-color: var(--dark-color) ;
+    opacity: 40%;
     z-index: -1;
 }
 
@@ -303,7 +308,7 @@ section{
 }
 
 .input,
-.options{
+.options {
     outline: none;
     border: none;
     width: 100%;
@@ -331,6 +336,14 @@ section{
 
 .heading{
     display: block;
+    color:black;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.heading-check{
+    display: block;
+    color:white;
     font-size: 4rem;
     text-transform: uppercase;
 }
@@ -371,7 +384,8 @@ section{
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: var(--purple-transparent-alt);
+    background-color: grey;
+    opacity: 20%;
     z-index: -1;
 
 }
@@ -407,13 +421,13 @@ section{
 /*Special section style*/
 
 .offer{
-    background: linear-gradient(to right,rgba(250,158,44,8), rgba(143,80,251,.8)),
+    background: linear-gradient(to right, rgba(250,158,44,8), rgba(0, 0, 0, 0.8)),
     url("./images/the_paradise_bg.jpg") bottom center no-repeat;
     background-size: cover;
 }
 
 .offer-content{
-    background-color: #fff;
+    background-color:whitesmoke;
     text-align: center;
     padding: 5rem 1rem;
     position: relative;
@@ -422,14 +436,14 @@ section{
 }
 
 .discount{
-    background-color: var(--yellow-solid);
+    background-color:orange;
     position: absolute;
     top: 0;
     left: 0;
     padding: 1rem;
     font-weight: bold;
     text-transform: uppercase;
-    outline: 2px solid var(--yellow-solid);
+    outline: 2px solid var(--dark-color);
     outline-offset: .5rem;
 }
 .paragraph{
@@ -553,7 +567,7 @@ section{
 
 .footer{
     padding: 5rem 0;
-    background-color: var(--purple-solid);
+    background-color: var(--dark-color);
     color: #fff;
 
 }
@@ -658,7 +672,7 @@ section{
         flex: 0 0 40%;
         margin-left: 2.5rem;
     }
-
+}
 @media screen and (min-width: 1000px){
     section:not(.booking){
         padding: 10rem 0;
@@ -699,12 +713,16 @@ section{
         font-size: 12rem;
 
     }
+    .heading-check{
+        font-size: 4.6rem;
+
+    }
     .sub-title{
         font-size: 4.6rem;
     }
     /*Booking section styles*/
     .book-form{
-        display: flex;
+        display:flex;
         justify-content: space-between;
     }
     .book-form .input-group{
@@ -735,5 +753,4 @@ section{
     .book-form .input-group:first-child{
         flex: 0 0 30%;
     }
-}
 }
