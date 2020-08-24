@@ -8,14 +8,19 @@
     <div class="boxshape">
       <img src="./css/images/user.png" class="user" />
       <h1>Welcome New Client</h1>
-      <form name="myForm" onsubmit="return validateForm()">
+      <form action="signup.php" method="post">
+        <p>First Name</p>
+        <input type="text" name="fname_tbx" placeholder="First Name" />
+        <p>Last Name</p>
+        <input type="text" name="lname_tbx" placeholder="Last Name" />
         <p>Email</p>
         <input type="text" name="email_tbx" placeholder="Email" />
         <p>Password</p>
         <input type="password" name="password_tbx" placeholder="Password" />
         <p>Re-Enter Password</p>
         <input type="password" name="re_pass_tbx" placeholder="Password" />
-        <input type="submit" name="" value="Sign Up" />
+        <button type="submit" name="submit">Sign Up</button><br />
+
         <a href="login.html">Already Having an Account</a>
       </form>
     </div>
