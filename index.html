@@ -12,6 +12,8 @@
      <!--Font awesome CDN-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link rel="stylesheet" href="./css/index-styles.css">
+    <!--    JS File Link Connection-->
+        <script src ="index.js"></script>
 </head>
 
 <body>
@@ -75,22 +77,22 @@
             <span class="heading-check">Check Availability</span>
         </h5>
         <div class="container">
-            <form action="" class="form">
+            <form onsubmit="checkform();"action="" class="form" name="form1">
                 <div class="input-group">
                     <label for="destination" class="input-label">Destination</label>
-                    <input type="text" class="input" id="destination">
+                    <input type="text" class="input" id="destination" name="desti">
                 </div>
                 <div class="input-group">
                     <label for="check-in" class="input-label">Check in</label>
-                    <input type="date" class="input" id="check-in">
+                    <input type="date" class="input" id="check-in" name="checkin">
                 </div>
                 <div class="input-group">
                     <label for="check-out" class="input-label">Check out</label>
-                    <input type="date" class="input" id="check-out">
+                    <input type="date" class="input" id="check-out"name="checkout">
                 </div>
                 <div class="input-group">
                     <label for="adults" class="input-label">Adults</label>
-                    <select class="options" id="adults">
+                    <select class="options" id="adults"name="adults1">
                         <option value="0">0</option>
                         <option value="0">1</option>
                         <option value="0">2</option>
@@ -102,7 +104,7 @@
                 </div>
                 <div class="input-group">
                     <label for="children" class="input-label">Children</label>
-                    <select class="options" id="children">
+                    <select class="options" id="children" name="Children1">
                         <option value="0">0</option>
                         <option value="0">1</option>
                         <option value="0">2</option>
