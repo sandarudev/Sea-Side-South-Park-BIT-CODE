@@ -2,21 +2,23 @@
 <html lang="en">
   <head>
     <title>Login Page | Sea Side South Park</title>
-    <link rel="stylesheet" type="text/css" href="./css/login-styles.css" />
+    <link rel="stylesheet" type="text/css" href="./css/login_styles.css" />
   </head>
   <body>
     <div class="boxshape">
       <img src="./css/images/user.png" class="user" />
       <h1>Welcome Back</h1>
-      <form>
-        <p>User Name</p>
-        <input type="text" name="" placeholder="User Name" />
+      <form name="myForm" onsubmit="return validateForm()">
+        <p>Email</p>
+        <input type="text" name="email_tbx" placeholder="Email" />
         <p>Password</p>
-        <input type="password" name="" placeholder="Password" />
+        <input type="password" name="password_tbx" placeholder="Password" />
         <input type="submit" name="" value="Login" />
-        <a href="#">Forgotten Password</a><br />
-        <a href="#">Create a New Account</a>
+        <a href="#">Frogotten Password</a><br />
+        <a href="signup.html">Create a New Account</a>
       </form>
     </div>
+
+    <script src="./js/login.js"></script>
   </body>
 </html>
